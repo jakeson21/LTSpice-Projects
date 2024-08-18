@@ -1,0 +1,19 @@
+Version 4
+SymbolType BLOCK
+LINE Normal 76 0 -80 -80
+LINE Normal -80 80 76 0
+LINE Normal -80 -80 -80 80
+WINDOW 0 17 97 Left 0
+WINDOW 1 17 80 Left 0
+PIN -80 0 LEFT 8
+PINATTR PinName Inp
+PINATTR SpiceOrder 1
+PIN 80 0 RIGHT 8
+PINATTR PinName Out
+PINATTR SpiceOrder 2
+PIN -16 -48 LEFT 8
+PINATTR PinName Vpos
+PINATTR SpiceOrder 3
+PIN -16 48 LEFT 8
+PINATTR PinName Vneg
+PINATTR SpiceOrder 4

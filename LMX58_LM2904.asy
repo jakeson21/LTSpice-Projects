@@ -1,0 +1,24 @@
+Version 4
+SymbolType BLOCK
+LINE Normal -32 64 -32 -64
+LINE Normal 96 0 -32 64
+LINE Normal -32 -64 96 0
+WINDOW 0 -32 -96 Bottom 2
+WINDOW 3 -32 -96 Top 2
+SYMATTR Value LMX58_LM2904
+SYMATTR Prefix X
+SYMATTR ModelFile D:\git-repos\LTSpice-Projects\lm358\lmx58_lm2904.lib
+PIN -32 32 LEFT 8
+PINATTR PinName +IN
+PINATTR SpiceOrder 1
+PIN -32 -32 LEFT 8
+PINATTR PinName -IN
+PINATTR SpiceOrder 2
+PIN 32 -32 VRIGHT 8
+PINATTR PinName +
+PINATTR SpiceOrder 3
+PIN 32 32 VLEFT 8
+PINATTR PinName -
+PINATTR SpiceOrder 4
+PIN 96 0 RIGHT 8
+PINATTR SpiceOrder 5
