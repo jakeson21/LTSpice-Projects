@@ -1,0 +1,22 @@
+Version 4
+SymbolType BLOCK
+RECTANGLE Normal -32 -40 48 40
+WINDOW 0 8 -40 Bottom 2
+WINDOW 3 8 40 Top 2
+WINDOW 39 57 86 Center 2
+SYMATTR Value GBU8D
+SYMATTR SpiceLine Vrrm=200 Vrsm=200 Ir=5u Irsm=5u Vf=1.0 Ifav=8 Rs=0.003 trr=1500n Cj=80p Eg=1.11 Xti=3
+SYMATTR Prefix X
+SYMATTR ModelFile .\gbu8d_spice.lib
+PIN -32 -16 LEFT 8
+PINATTR PinName ~1
+PINATTR SpiceOrder 1
+PIN -32 16 LEFT 8
+PINATTR PinName ~2
+PINATTR SpiceOrder 2
+PIN 48 -16 RIGHT 8
+PINATTR PinName +
+PINATTR SpiceOrder 3
+PIN 48 16 RIGHT 8
+PINATTR PinName -
+PINATTR SpiceOrder 4

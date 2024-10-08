@@ -1,0 +1,8 @@
+* source OPA862
+V_V1         VCC 0 2.5Vdc
+V_V2         VEE 0 -2.5Vdc
+R_R3         OUT+ N12608  1k TC=0,0 
+R_R4         OUT+ OUT-  1k TC=0,0 
+R_R5         N12608 0  1k TC=0,0 
+X_U1         N14019 N12608 OUT+ OUT- 0 VCC VEE OPA862
+V_V3         N14019 0 DC 0Vdc AC 1Vac 

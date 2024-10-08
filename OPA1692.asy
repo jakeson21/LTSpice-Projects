@@ -1,0 +1,33 @@
+Version 4
+SymbolType BLOCK
+LINE Normal -64 32 -64 -32
+LINE Normal 0 0 -64 32
+LINE Normal -64 -32 0 0
+LINE Normal -55 -16 -48 -16
+LINE Normal -56 16 -48 16
+LINE Normal -52 12 -52 20
+LINE Normal -24 -25 -16 -25
+LINE Normal -20 -29 -20 -21
+LINE Normal -32 -16 -32 -32
+LINE Normal -32 32 -32 16
+LINE Normal -23 24 -16 24
+WINDOW 0 16 -24 Bottom 2
+WINDOW 3 32 24 Top 2
+SYMATTR Prefix X
+SYMATTR Value OPA1692
+SYMATTR ModelFile D:\git-repos\LTSpice-Projects\OPA1692\OPA1692.LIB
+PIN -64 16 NONE 8
+PINATTR PinName IN+
+PINATTR SpiceOrder 1
+PIN -64 -16 NONE 8
+PINATTR PinName IN-
+PINATTR SpiceOrder 2
+PIN -32 -32 NONE 8
+PINATTR PinName VCC
+PINATTR SpiceOrder 3
+PIN -32 32 NONE 8
+PINATTR PinName VEE
+PINATTR SpiceOrder 4
+PIN 0 0 NONE 8
+PINATTR PinName OUT
+PINATTR SpiceOrder 5

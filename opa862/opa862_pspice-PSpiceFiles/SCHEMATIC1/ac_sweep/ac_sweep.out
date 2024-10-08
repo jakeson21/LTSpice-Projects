@@ -1,0 +1,467 @@
+
+**** 12/16/20 15:55:10 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ac_sweep"  [ C:\Users\a0232073\Desktop\GWL_Models\OPA862\AppendScript\OPA862_PSPICE\currentload-pspicefiles\
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "ac_sweep.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../opa862_a.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpiceTIPSpice_Install\17.4.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 31 1k 10G
+.OPTIONS ADVCONV
+.PROBE64 N([OUT+])
+.PROBE64 N([OUT-])
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source OPA862
+V_V1         VCC 0 2.5Vdc
+V_V2         VEE 0 -2.5Vdc
+R_R3         OUT+ N12608  1k TC=0,0 
+R_R4         OUT+ OUT-  1k TC=0,0 
+R_R5         N12608 0  1k TC=0,0 
+X_U1         N14019 N12608 OUT+ OUT- 0 VCC VEE OPA862
+V_V3         N14019 0 DC 0Vdc AC 1Vac 
+
+**** RESUMING ac_sweep.cir ****
+.END
+
+INFO(ORPSIM-16573): AC analysis does not support expression evaluation at each frequency. ABM devices with non-linear operations will be evaluated only at bias point.
+
+**** 12/16/20 15:55:10 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ac_sweep"  [ C:\Users\a0232073\Desktop\GWL_Models\OPA862\AppendScript\OPA862_PSPICE\currentload-pspicefiles\
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.X_E_N.DVN  X_U1.X_E_N1.DVN 
+          IS  100.000000E-18  100.000000E-18 
+          KF    3.162278E-12    3.162278E-12 
+
+
+               X_U1.X_I_NN.DNVF 
+          IS  100.000000E-18 
+          KF    3.162278E-12 
+
+
+               X_U1.X_I_NN1.DNVF 
+          IS  100.000000E-18 
+          KF    3.162278E-12 
+
+
+               X_U1.X_I_NP.DNVF 
+          IS  100.000000E-18 
+          KF    3.162278E-12 
+
+
+               X_U1.X_I_NP1.DNVF 
+          IS  100.000000E-18 
+          KF    3.162278E-12 
+
+
+**** 12/16/20 15:55:10 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ac_sweep"  [ C:\Users\a0232073\Desktop\GWL_Models\OPA862\AppendScript\OPA862_PSPICE\currentload-pspicefiles\
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.R_NOISE    X_U1.R_NOISELESS 
+  T_Measured   27              27            
+   T_Current   27            -273.15         
+           R    1               1            
+
+
+**** 12/16/20 15:55:10 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ac_sweep"  [ C:\Users\a0232073\Desktop\GWL_Models\OPA862\AppendScript\OPA862_PSPICE\currentload-pspicefiles\
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.X_SW_OL.OL_SW 
+         RON    1.000000E-03 
+        ROFF    1.000000E+09 
+         VON     .9          
+        VOFF     .8          
+
+
+               X_U1.X_SW_OL1.OL_SW 
+         RON    1.000000E-03 
+        ROFF    1.000000E+09 
+         VON     .9          
+        VOFF     .8          
+
+
+               X_U1.X_U1.ESD_SW 
+         RON   50            
+        ROFF    1.000000E+12 
+         VON     .5          
+        VOFF     .45         
+
+
+               X_U1.X_U11.OR_SW 
+         RON     .01         
+        ROFF    1.000000E+09 
+         VON     .01         
+        VOFF    0            
+
+
+               X_U1.X_U23.OR_SW 
+         RON     .01         
+        ROFF    1.000000E+09 
+         VON     .01         
+        VOFF    0            
+
+
+               X_U1.X_U24.ESD_SW 
+         RON   50            
+        ROFF    1.000000E+12 
+         VON     .5          
+        VOFF     .45         
+
+
+Starting pseudo-transient algorithm.
+
+INFO(ORPSIM-16594): To improve Pseudotransient Convergence and Performance, set following options to relax stabilization criteria for capacitor currents and inductor voltages: PTRANABSTOL=1e-5, PTRANVNTOL=1e-4
+
+**** 12/16/20 15:55:10 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ac_sweep"  [ C:\Users\a0232073\Desktop\GWL_Models\OPA862\AppendScript\OPA862_PSPICE\currentload-pspicefiles\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)    2.5000  (  VEE)   -2.5000  ( OUT+)     .0011  ( OUT-)-305.6E-06      
+
+(N12608) 55.03E-06 (N14019)    0.0000 (X_U1.MID) 14.01E-15                      
+
+(X_U1.OLN)-180.2E-12                  (X_U1.OLP)-180.2E-12                      
+
+(X_U1.ESDN) 55.02E-06                 (X_U1.ESDP)-10.00E-09                     
+
+(X_U1.OLN2)-180.2E-12                 (X_U1.OLP2)-180.2E-12                     
+
+(X_U1.VCLP)     .0916                 (X_U1.CLAMP)     .0916                    
+
+(X_U1.ESDN2) 49.99E-06                (X_U1.ESDP2)-10.00E-09                    
+
+(X_U1.PSRRN)-2.518E-06                (X_U1.PSRRP) 2.518E-06                    
+
+(X_U1.VCC_B)    2.5000                (X_U1.VCLP2)    -.0461                    
+
+(X_U1.VEE_B)   -2.5000                (X_U1.VIMON)     .0041                    
+
+(X_U1.VIN-2) 50.00E-06                (X_U1.AOLNET) 64.85E-09                   
+
+(X_U1.CLAMP2)    -.0461               (X_U1.N06456)-10.00E-09                   
+
+(X_U1.N10561) 49.99E-06               (X_U1.N10570) 49.99E-06                   
+
+(X_U1.N11984) 49.99E-06               (X_U1.N11991) 55.02E-06                   
+
+(X_U1.N25816) 55.03E-06               (X_U1.N28602)   -2.0000                   
+
+(X_U1.N30136)    1.4000               (X_U1.N30913) 55.03E-06                   
+
+(X_U1.N31014) 55.03E-06               (X_U1.N55050)     .2716                   
+
+(X_U1.N55875)    -.0884               (X_U1.N56119)     .2716                   
+
+(X_U1.N56635) 14.01E-15               (X_U1.N56659) 14.01E-15                   
+
+(X_U1.N56721) 14.01E-15               (X_U1.N56733) 14.01E-15                   
+
+(X_U1.N56891) -512.5000               (X_U1.N56919)  512.5000                   
+
+(X_U1.N61579)     .0916               (X_U1.N68594)-180.2E-12                   
+
+(X_U1.N68747)-180.2E-12               (X_U1.N69264) 14.01E-15                   
+
+(X_U1.N73852)    -.0884               (X_U1.N91498)     .0916                   
+
+(X_U1.SW_OL2) 14.01E-15               (X_U1.VIMON2)    -.0021                   
+
+(X_U1.VOUT_S)     .0011               (X_U1.VSENSE)     .0916                   
+
+(X_U1.AOLNET2)-32.60E-09              (X_U1.N110431)     .0041                  
+
+(X_U1.N112292)     .0011              (X_U1.N166377)    -.0884                  
+
+(X_U1.N166817)     .2716              (X_U1.N317950) 17.22E-15                  
+
+(X_U1.N406634)    2.5000              (X_U1.N406794)   -2.5000                  
+
+(X_U1.N516723)     .0011              (X_U1.N695874)     .0916                  
+
+(X_U1.N703229) 13.81E-15              (X_U1.N725214)  205.6200                  
+
+(X_U1.N725346)    4.1129              (X_U1.N725398)    8.2267                  
+
+(X_U1.N725428)     .0823              (X_U1.N725574)    4.1129                  
+
+(X_U1.N725708)    4.1129              (X_U1.N725762)     .1028                  
+
+(X_U1.N725836)     .8225              (X_U1.N725936)    4.1124                  
+
+(X_U1.N749288) 49.99E-06              (X_U1.N785266)-426.4E-15                  
+
+(X_U1.N785276) 13.81E-15              (X_U1.N785286)-5.939E-15                  
+
+(X_U1.N785296) 13.81E-15              (X_U1.N785316) 13.81E-15                  
+
+(X_U1.N785326) 12.02E-15              (X_U1.N785650) 10.02E-15                  
+
+(X_U1.N794082)    -.0015              (X_U1.N794088)-2.773E-06                  
+
+(X_U1.N794108)-2.798E-06              (X_U1.N794122)-25.18E-06                  
+
+(X_U1.N794364)    -.0028              (X_U1.N810782)     .0015                  
+
+(X_U1.N810788) 2.773E-06              (X_U1.N810798)     .0028                  
+
+(X_U1.N810802) 2.798E-06              (X_U1.N810812) 25.18E-06                  
+
+(X_U1.N824604)    4.1131              (X_U1.N891797)-180.2E-12                  
+
+(X_U1.N891825)-180.2E-12              (X_U1.N917372)    2.5270                  
+
+(X_U1.N917382)     .0916              (X_U1.N917434)     .0916                  
+
+(X_U1.N917490)     .0916              (X_U1.VCC_CLP)    2.3500                  
+
+(X_U1.VEE_CLP)   -2.3500              (X_U1.VOUT_S2)-305.6E-06                  
+
+(X_U1.VSENSE2)    -.0461              (X_U1.X_E_N.3)    0.0000                  
+
+(X_U1.X_E_N.4)    0.0000              (X_U1.X_E_N.5)    0.0000                  
+
+(X_U1.X_E_N.6)    0.0000              (X_U1.X_E_N.7)     .8338                  
+
+(X_U1.X_E_N.8)     .8338              (X_U1.CL_CLAMP)     .0916                 
+
+(X_U1.N1026117)   57.0000             (X_U1.N1026281)    2.3500                 
+
+(X_U1.N1026303)    2.3500             (X_U1.N1026555) 14.01E-15                 
+
+(X_U1.N1026583) 14.01E-15             (X_U1.N1026735) 14.01E-15                 
+
+(X_U1.N1026763) 14.01E-15             (X_U1.N1026861) 14.01E-15                 
+
+(X_U1.N1026875) 14.01E-15             (X_U1.N1026979)   -2.3500                 
+
+(X_U1.N1026995)   -2.3500             (X_U1.N1027041) 14.01E-15                 
+
+(X_U1.N1027055) 14.01E-15             (X_U1.N1027263)  -50.0000                 
+
+(X_U1.N1093427)-426.4E-15             (X_U1.N1093437) 13.81E-15                 
+
+(X_U1.N1093447)-5.939E-15             (X_U1.N1093457) 13.81E-15                 
+
+(X_U1.N1093467) 10.02E-15             (X_U1.N1093477) 13.81E-15                 
+
+(X_U1.N1093487) 12.02E-15             (X_U1.N1093497) 13.81E-15                 
+
+(X_U1.N1094691)   57.0000             (X_U1.N1094729)-180.2E-12                 
+
+(X_U1.N1094735)-180.2E-12             (X_U1.N1094753)  512.5000                 
+
+(X_U1.N1094929)    2.3500             (X_U1.N1095239)    2.3500                 
+
+(X_U1.N1095757)    -.2261             (X_U1.N1095763)     .1339                 
+
+(X_U1.N1095865) 14.01E-15             (X_U1.N1095893) 14.01E-15                 
+
+(X_U1.N1095955)    -.2261             (X_U1.N1095959)    -.2261                 
+
+(X_U1.N1095965)     .1339             (X_U1.N1095971)     .1339                 
+
+(X_U1.N1096025)    -.0461             (X_U1.N1096037) 14.01E-15                 
+
+(X_U1.N1096065) 14.01E-15             (X_U1.N1096159)  -50.0000                 
+
+(X_U1.N1096255) -512.5000             (X_U1.N1096307) 14.01E-15                 
+
+(X_U1.N1096335) 14.01E-15             (X_U1.N1096379) 14.01E-15                 
+
+(X_U1.N1096411) 14.01E-15             (X_U1.N1096451) 14.01E-15                 
+
+(X_U1.N1096483) 14.01E-15             (X_U1.N1096809) 14.01E-15                 
+
+(X_U1.N1096837) 14.01E-15             (X_U1.N1096867)   -2.3500                 
+
+(X_U1.N1096883)   -2.3500             (X_U1.N1097073) 49.99E-06                 
+
+(X_U1.N1097081) 49.99E-06             (X_U1.N1097817)    1.4000                 
+
+(X_U1.N1098039) 49.99E-06             (X_U1.N1098053) 49.99E-06                 
+
+(X_U1.N1098299)-10.00E-09             (X_U1.N1098323) 49.99E-06                 
+
+(X_U1.N1098339) 49.99E-06             (X_U1.N1098391) 49.99E-06                 
+
+(X_U1.N1098621)   -2.0000             (X_U1.N1098985)   -1.2705                 
+
+(X_U1.N1098995)    -.0461             (X_U1.N1099029)    -.0021                 
+
+(X_U1.N1099057)-305.6E-06             (X_U1.N1099061)   -4.1583                 
+
+(X_U1.N1099065)    -.0416             (X_U1.N1099161)   -2.0790                 
+
+(X_U1.N1099171)    -.0520             (X_U1.N1099341)   -2.0789                 
+
+(X_U1.N1099359)   -2.0789             (X_U1.N1099377) -103.9400                 
+
+(X_U1.N1099387)    -.4157             (X_U1.N1099521)    -.0461                 
+
+(X_U1.N1099577)    -.0461             (X_U1.N1099607)    -.0461                 
+
+(X_U1.N1100133)-305.6E-06             (X_U1.N1100339)   -2.0787                 
+
+(X_U1.N1100539)   -2.0789             (X_U1.N1101471)-180.2E-12                 
+
+(X_U1.N1101485)    -.0461             (X_U1.N1101765) 14.01E-15                 
+
+(X_U1.N1102123)-180.2E-12             (X_U1.VCC_CLP2)    2.3500                 
+
+(X_U1.VEE_CLP2)   -2.3500             (X_U1.X_E_N1.3)    0.0000                 
+
+(X_U1.X_E_N1.4)    0.0000             (X_U1.X_E_N1.5)    0.0000                 
+
+(X_U1.X_E_N1.6)    0.0000             (X_U1.X_E_N1.7)     .8338                 
+
+(X_U1.X_E_N1.8)     .8338             (X_U1.X_I_NN.3)    0.0000                 
+
+(X_U1.X_I_NN.4)    0.0000             (X_U1.X_I_NN.5)    0.0000                 
+
+(X_U1.X_I_NN.6)    0.0000             (X_U1.X_I_NN.7)     .8338                 
+
+(X_U1.X_I_NN.8)     .8338             (X_U1.X_I_NP.3)    0.0000                 
+
+(X_U1.X_I_NP.4)    0.0000             (X_U1.X_I_NP.5)    0.0000                 
+
+(X_U1.X_I_NP.6)    0.0000             (X_U1.X_I_NP.7)     .8338                 
+
+(X_U1.X_I_NP.8)     .8338             (X_U1.CL_CLAMP2)    -.0461                
+
+(X_U1.X_I_NN1.3)    0.0000            (X_U1.X_I_NN1.4)    0.0000                
+
+(X_U1.X_I_NN1.5)    0.0000            (X_U1.X_I_NN1.6)    0.0000                
+
+(X_U1.X_I_NN1.7)     .8338            (X_U1.X_I_NN1.8)     .8338                
+
+(X_U1.X_I_NP1.3)    0.0000            (X_U1.X_I_NP1.4)    0.0000                
+
+(X_U1.X_I_NP1.5)    0.0000            (X_U1.X_I_NP1.6)    0.0000                
+
+(X_U1.X_I_NP1.7)     .8338            (X_U1.X_I_NP1.8)     .8338                
+
+(X_U1.CLAW_CLAMP)     .0916           (X_U1.CLAW_CLAMP2)    -.0461              
+
+(X_U1.SW_OL_OPA862) 14.01E-15         (X_U1.X_VOS_VS_VCM.1) 49.99E-06           
+
+(X_U1.X_VOS_VS_VCM1.1) 49.99E-06      
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -3.104E-03
+    V_V2         3.102E-03
+    V_V3        -1.000E-06
+    X_U1.V_V12   2.327E-20
+    X_U1.V_V7    5.893E-18
+    X_U1.V_VCM_MAX  -1.400E-09
+    X_U1.V_VCM_MAX1  -1.400E-09
+    X_U1.V_VCM_MIN   2.000E-09
+    X_U1.V_VCM_MIN1   2.000E-09
+    X_U1.V_V_GRN   5.125E-07
+    X_U1.V_V_GRN1   5.125E-07
+    X_U1.V_V_GRP  -5.125E-07
+    X_U1.V_V_GRP1  -5.125E-07
+    X_U1.V_V_ISCN   5.000E-08
+    X_U1.V_V_ISCN1   5.000E-08
+    X_U1.V_V_ISCP  -5.700E-08
+    X_U1.V_V_ISCP1  -5.700E-08
+    X_U1.V_V_ORN   0.000E+00
+    X_U1.V_V_ORN1   0.000E+00
+    X_U1.V_V_ORP   0.000E+00
+    X_U1.V_V_ORP1   0.000E+00
+    X_U1.X_H1.VH_H1  -1.802E-10
+    X_U1.X_H2.VH_H2   1.802E-10
+    X_U1.X_H3.VH_H3  -4.100E-06
+    X_U1.X_H4.VH_H4  -1.802E-10
+    X_U1.X_H5.VH_H5   1.802E-10
+    X_U1.X_H6.VH_H6   2.075E-06
+    X_U1.X_VOS_VS_VCM.V1   5.893E-18
+    X_U1.X_VOS_VS_VCM1.V1   2.327E-20
+
+    TOTAL POWER DISSIPATION   1.66E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 12/16/20 15:55:10 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ac_sweep"  [ C:\Users\a0232073\Desktop\GWL_Models\OPA862\AppendScript\OPA862_PSPICE\currentload-pspicefiles\
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =       47.99
+  Total job time (using Solver 1)   =       32.16
+

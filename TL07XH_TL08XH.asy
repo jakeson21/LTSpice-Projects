@@ -1,0 +1,33 @@
+Version 4
+SymbolType BLOCK
+LINE Normal -64 16 -64 -48
+LINE Normal 0 -16 -64 16
+LINE Normal -64 -48 0 -16
+LINE Normal -32 -32 -32 -48
+LINE Normal -32 0 -32 16
+LINE Normal -56 -32 -48 -32
+LINE Normal -56 0 -48 0
+LINE Normal -24 -40 -16 -40
+LINE Normal -20 -36 -20 -44
+LINE Normal -24 8 -16 8
+LINE Normal -52 -4 -52 4
+WINDOW 0 16 -40 Bottom 2
+WINDOW 3 48 8 Top 1
+SYMATTR Value TL07XH_TL08XH
+SYMATTR Prefix X
+SYMATTR ModelFile D:\git-repos\LTSpice-Projects\TL072H\tl07xh_tl08xh.lib
+PIN -64 0 NONE 8
+PINATTR PinName IN+
+PINATTR SpiceOrder 1
+PIN -64 -32 NONE 8
+PINATTR PinName IN-
+PINATTR SpiceOrder 2
+PIN -32 -48 NONE 8
+PINATTR PinName VCC
+PINATTR SpiceOrder 3
+PIN -32 16 NONE 8
+PINATTR PinName VEE
+PINATTR SpiceOrder 4
+PIN 0 -16 NONE 8
+PINATTR PinName OUT
+PINATTR SpiceOrder 5

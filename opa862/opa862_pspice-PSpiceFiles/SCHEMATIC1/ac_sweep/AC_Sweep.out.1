@@ -1,0 +1,232 @@
+
+**** 12/16/20 15:55:03 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ac_sweep"  [ C:\Users\a0232073\Desktop\GWL_Models\OPA862\AppendScript\OPA862_PSPICE\currentload-pspicefiles\
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "ac_sweep.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../opa862_a.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpiceTIPSpice_Install\17.4.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 31 1k 10G
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source OPA862
+V_V1         VCC 0 2.5Vdc
+V_V2         VEE 0 -2.5Vdc
+R_R3         OUT+ N12608  1k TC=0,0 
+R_R4         OUT+ OUT-  1k TC=0,0 
+R_R5         N12608 0  1k TC=0,0 
+X_U1         N14019 N12608 OUT+ OUT- 0 VCC VEE OPA862
+V_V3         N14019 0 DC 0Vdc AC 1Vac 
+
+**** RESUMING ac_sweep.cir ****
+.END
+
+INFO(ORPSIM-15423): Unable to find index file opa862_a.ind for library file opa862_a.lib.
+
+INFO(ORPSIM-15422): Making new index file opa862_a.ind for library file opa862_a.lib.
+
+Index has 26 entries from 1 file(s).
+
+INFO(ORPSIM-16573): AC analysis does not support expression evaluation at each frequency. ABM devices with non-linear operations will be evaluated only at bias point.
+
+**** 12/16/20 15:55:03 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ac_sweep"  [ C:\Users\a0232073\Desktop\GWL_Models\OPA862\AppendScript\OPA862_PSPICE\currentload-pspicefiles\
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.X_E_N.DVN  X_U1.X_E_N1.DVN 
+          IS  100.000000E-18  100.000000E-18 
+          KF    3.162278E-12    3.162278E-12 
+
+
+               X_U1.X_I_NN.DNVF 
+          IS  100.000000E-18 
+          KF    3.162278E-12 
+
+
+               X_U1.X_I_NN1.DNVF 
+          IS  100.000000E-18 
+          KF    3.162278E-12 
+
+
+               X_U1.X_I_NP.DNVF 
+          IS  100.000000E-18 
+          KF    3.162278E-12 
+
+
+               X_U1.X_I_NP1.DNVF 
+          IS  100.000000E-18 
+          KF    3.162278E-12 
+
+
+**** 12/16/20 15:55:03 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ac_sweep"  [ C:\Users\a0232073\Desktop\GWL_Models\OPA862\AppendScript\OPA862_PSPICE\currentload-pspicefiles\
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.R_NOISE    X_U1.R_NOISELESS 
+  T_Measured   27              27            
+   T_Current   27            -273.15         
+           R    1               1            
+
+
+**** 12/16/20 15:55:03 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ac_sweep"  [ C:\Users\a0232073\Desktop\GWL_Models\OPA862\AppendScript\OPA862_PSPICE\currentload-pspicefiles\
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.X_SW_OL.OL_SW 
+         RON    1.000000E-03 
+        ROFF    1.000000E+09 
+         VON     .9          
+        VOFF     .8          
+
+
+               X_U1.X_SW_OL1.OL_SW 
+         RON    1.000000E-03 
+        ROFF    1.000000E+09 
+         VON     .9          
+        VOFF     .8          
+
+
+               X_U1.X_U1.ESD_SW 
+         RON   50            
+        ROFF    1.000000E+12 
+         VON     .5          
+        VOFF     .45         
+
+
+               X_U1.X_U11.OR_SW 
+         RON     .01         
+        ROFF    1.000000E+09 
+         VON     .01         
+        VOFF    0            
+
+
+               X_U1.X_U23.OR_SW 
+         RON     .01         
+        ROFF    1.000000E+09 
+         VON     .01         
+        VOFF    0            
+
+
+               X_U1.X_U24.ESD_SW 
+         RON   50            
+        ROFF    1.000000E+12 
+         VON     .5          
+        VOFF     .45         
+
+
+ERROR(ORPSIM-16583): Detected an imported model containing transistors or diodes. For such models, PSpice for TI supports a minimum of one and maximum of three traces. Reduce the number of traces and simulate again.
+
+
+ABORTING SIMULATION
+**** 12/16/20 15:55:03 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ac_sweep"  [ C:\Users\a0232073\Desktop\GWL_Models\OPA862\AppendScript\OPA862_PSPICE\currentload-pspicefiles\
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+Node counts:
+  Top level (NUNODS)                =           7
+  External (NCNODS)                 =         233
+  Total (NUMNOD)                    =         233
+
+Total device count (NUMEL)          =         506
+  Capacitors (C)                    =          74
+  Diodes (D)                        =          12
+  VCVS (E)                          =          21
+  VCCS (G)                          =          89
+  CCVS (H)                          =           6
+  Current Sources (I)               =          17
+  Resistors (R)                     =         248
+  VSwitches (S)                     =          10
+  Voltage Sources (V)               =          29
+
+Number of subcircuits (X)           =          49
+
+Matrix statistics:
+  Matrix size (NSTOP)               =         289
+  Initial no. elements (NTTAR)      =        1155
+  No. elements w/ fillin (NTTBR)    =        1155
+  No. fillins (IFILL)               =           0
+  No. overflows (NTTOV)             =           0
+  No. LU operations (IOPS)          =           0
+  Percent sparsity (PERSPA)         =      98.617
+
+Analysis statistics:
+  No. total time points (NUMTTP)    =           0
+  No. rejected time points (NUMRTP) =           0
+  No. iterations (NUMNIT)           =           0
+
+Load Threads                        =           1
+
+Runtime statistics:                       Seconds      Iterations
+  Matrix load                       =        0.00
+  Matrix solution                   =        0.00               1
+  Readin                            =        1.56
+  General setup                     =         .02
+  CMI setup                     =        0.00
+  Setup                             =         .02
+  DC sweep                          =        0.00               0
+  Bias point                        =        0.00               0
+  AC and noise                      =        0.00               0
+  Total transient analysis          =        0.00
+  Output                            =        0.00
+  Overhead                          =         .22
+  License check-out time            =       46.36
+  Total job time (using Solver 1)   =        1.58
+

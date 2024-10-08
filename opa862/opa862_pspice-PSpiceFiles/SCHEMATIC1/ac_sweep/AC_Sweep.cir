@@ -1,0 +1,22 @@
+** Profile: "SCHEMATIC1-ac_sweep"  [ C:\Users\a0232073\Desktop\GWL_Models\OPA862\AppendScript\OPA862_PSPICE\currentload-pspicefiles\schematic1\ac_sweep.sim ] 
+
+** Creating circuit file "ac_sweep.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../opa862_a.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpiceTIPSpice_Install\17.4.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 31 1k 10G
+.OPTIONS ADVCONV
+.PROBE64 N([OUT+])
+.PROBE64 N([OUT-])
+.INC "..\SCHEMATIC1.net" 
+
+
+.END
